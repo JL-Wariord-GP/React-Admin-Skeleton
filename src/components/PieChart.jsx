@@ -1,13 +1,11 @@
-import { ResponsiveLine } from "@nivo/line";
-import { useTheme } from "@mui/material";
+import { ResponsivePie } from "@nivo/pie";
 import { tokens } from "../theme";
-import { mockLineData as data } from "../data/mockData";
+import { useTheme } from "@mui/material";
+import { mockPieData as data } from "../data/mockData";
 
-
-const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
+const PieChart = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
   return (
     <ResponsivePie
       data={data}
@@ -106,7 +104,6 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
       ]}
     />
   );
+};
 
-}
-
-export default PieChart
+export default PieChart;
